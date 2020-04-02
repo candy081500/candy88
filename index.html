@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+*{margin:0;padding:0;}
+.news{
+	width:500px;
+	border:1px solid #ccc;
+	height: 300px;
+	overflow: hidden;
+}
+ul li{
+	width:500px;
+	height:100px;
+	background: pink;
+	line-height: 100px;
+}
+</style>
+<body>	
+<div class="news">
+		<ul>
+			<li>iPhone 8开机后运行应用播放视频是啥样？震撼</li>
+			<li>MIUI历代图标汇总：最大的变化是它</li>
+			<li>尼康D850定性大猜想：会是大D810还是小D5？</li>
+			<li>六要点助你入门室内建筑摄影 传佳能或发多款移轴镜头</li>
+			<li>消费者报告撤销Surface推荐 惠普三倍补偿</li>
+		</ul>
+	</div>
+<script src="jquery1.7.js"></script>
+<script>
+$(function(){
+	var len = $("ul li").length;
+	var height = $("ul li").first().height();
+	$("ul").height(len*height)
+	setInterval(function(){
+		$("ul").animate({marginTop:-height},function(){
+			$("ul li").first().appendTo($("ul"));
+			$("ul").css({marginTop:0});
+		})
+	},1000)
+})
+</script>
+</body>
+</html>
