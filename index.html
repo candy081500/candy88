@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>README</title>
 </head>
 <style>
 *{margin:0;padding:0;}
 .news{
-	width:500px;
+	width:auto;
 	border:1px solid #ccc;
-	height: 300px;
+	height: auto;
 	overflow: hidden;
 }
 ul li{
 	width:500px;
-	height:100px;
-	background: pink;
-	line-height: 100px;
+	height:50px;
+	background: orange;
+	line-height: 50px;
 }
 </style>
 <body>	
@@ -60,7 +60,7 @@ $(function(){
 			$("ul li").first().appendTo($("ul"));
 			$("ul").css({marginTop:0});
 		})
-	},1000)
+	},500)
 })
 </script>
 </body>
